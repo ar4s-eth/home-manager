@@ -31,7 +31,7 @@ in {
     enable = mkEnableOption "Kitty terminal emulator";
 
     package = mkOption {
-      type = types.package;
+      type = types.nullOr types.package;
       default = pkgs.kitty;
       defaultText = literalExpression "pkgs.kitty";
       description = ''
